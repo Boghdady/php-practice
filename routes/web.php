@@ -57,3 +57,6 @@ Route::group(['namespace' => 'AdminPanel', 'prefix' => 'admin'],function (){
     Route::patch('updateAdmin', function (){});
     Route::delete('deleteAdmin', function (){}) -> middleware('auth');
 });
+
+// Use Resource is useful in CRUD Operations
+Route::resource('news','NewsController');
